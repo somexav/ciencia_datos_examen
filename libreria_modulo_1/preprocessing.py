@@ -351,7 +351,9 @@ def remove_outliers(df: pd.DataFrame, method: str = 'iqr', columns: list = None,
             df_clean = df_clean[(df_clean[col] >= lower_bound) & (df_clean[col] <= upper_bound)]
     
     elif method == 'zscore':
+        print("Eliminando outliers usando el método Z-Score. threshold ")
         threshold = kwargs.get('threshold', 3.0)
+        print(f"Eliminando outliers usando el método Z-Score. threshold {threshold}")   
         for col in columns:
             z_scores = np.abs((df_clean[col] - df_clean[col].mean()) / df_clean[col].std())
             df_clean = df_clean[z_scores <= threshold]
