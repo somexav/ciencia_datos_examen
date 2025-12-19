@@ -23,7 +23,7 @@ def cargar_datos():
     """Cargar y procesar todos los datos"""
     # Intentar cargar el dataset ya procesado
     try:
-        df = pd.read_csv('datos/dataset_final_limpio.csv')
+        df = pd.read_csv('datos/datos_limpios.csv')
         # Convertir rating_category a categórico
         df['rating_category'] = pd.Categorical(
             df['rating_category'], 
