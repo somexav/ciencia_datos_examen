@@ -48,5 +48,3 @@ desktop.ini
 *.pkl
 *.pickle
 
-# Plots (uncomment if you don't want to track plots)
-plots/
